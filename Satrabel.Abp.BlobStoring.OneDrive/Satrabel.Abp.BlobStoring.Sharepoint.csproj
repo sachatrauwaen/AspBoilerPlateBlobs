@@ -2,13 +2,16 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <AssemblyName>Satrabel.Abp.BlobStoring.OneDrive</AssemblyName>
-        <PackageId>Satrabel.Abp.BlobStoring.OneDrive</PackageId>
+        <AssemblyName>Satrabel.Abp.BlobStoring.Sharepoint</AssemblyName>
+        <PackageId>Satrabel.Abp.BlobStoring.Sharepoint</PackageId>
         <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
         <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
         <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
         <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
         <RootNamespace />
+      <PackageDescription>SharepointBlobProvider</PackageDescription>
+
+      <RepositoryUrl>https://github.com/sachatrauwaen/AspBoilerPlateBlobs</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>

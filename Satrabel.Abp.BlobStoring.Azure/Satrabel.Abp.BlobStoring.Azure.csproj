@@ -9,6 +9,8 @@
         <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
         <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
         <RootNamespace />
+      <PackageDescription>AzureBlobProvider</PackageDescription>
+        <RepositoryUrl>https://github.com/sachatrauwaen/AspBoilerPlateBlobs</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
