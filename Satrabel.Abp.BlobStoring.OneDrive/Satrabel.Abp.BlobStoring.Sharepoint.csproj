@@ -12,6 +12,7 @@
       <PackageDescription>SharepointBlobProvider</PackageDescription>
 
       <RepositoryUrl>https://github.com/sachatrauwaen/AspBoilerPlateBlobs</RepositoryUrl>
+      <Version>1.0.1</Version>
     </PropertyGroup>
 
     <ItemGroup>
