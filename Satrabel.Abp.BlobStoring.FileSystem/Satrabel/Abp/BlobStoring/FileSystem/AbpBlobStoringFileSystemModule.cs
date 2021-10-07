@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 //using Volo.Abp.Modularity;
 
-namespace Satrabel.Abp.BlobStoring.FileSystem
+namespace Satrabel.AspBoilerPlate.BlobStoring.FileSystem
 {
     [DependsOn(
         typeof(AbpBlobStoringModule)

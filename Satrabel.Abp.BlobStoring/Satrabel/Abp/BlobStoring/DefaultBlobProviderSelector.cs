@@ -8,7 +8,7 @@ using JetBrains.Annotations;
 //using Volo.Abp.DependencyInjection;
 //using Volo.Abp.DynamicProxy;
 
-namespace Satrabel.Abp.BlobStoring
+namespace Satrabel.AspBoilerPlate.BlobStoring
 {
     public class DefaultBlobProviderSelector : IBlobProviderSelector, ITransientDependency
     {

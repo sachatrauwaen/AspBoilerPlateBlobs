@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Satrabel.Abp.BlobStoring.Azure
+namespace Satrabel.AspBoilerPlate.BlobStoring.Azure
 {
     public static class AzureBlobContainerConfigurationExtensions
     {

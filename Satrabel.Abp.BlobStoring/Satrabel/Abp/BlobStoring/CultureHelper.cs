@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 
-namespace Satrabel.Abp.BlobStoring
+namespace Satrabel.AspBoilerPlate.BlobStoring
 {
     public static class CultureHelper
     {

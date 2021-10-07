@@ -1,4 +1,4 @@
-﻿namespace Satrabel.Abp.BlobStoring
+﻿namespace Satrabel.AspBoilerPlate.BlobStoring
 {
     public interface IBlobNamingNormalizer
     {

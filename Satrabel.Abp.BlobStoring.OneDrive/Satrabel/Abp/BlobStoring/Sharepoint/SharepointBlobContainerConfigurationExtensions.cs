@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Satrabel.Abp.BlobStoring.Sharepoint
+namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
 {
     public static class SharepointBlobContainerConfigurationExtensions
     {

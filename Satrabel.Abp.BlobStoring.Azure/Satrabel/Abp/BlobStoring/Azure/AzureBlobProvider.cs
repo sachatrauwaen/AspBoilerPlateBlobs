@@ -8,7 +8,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 //using Volo.Abp.DependencyInjection;
 
-namespace Satrabel.Abp.BlobStoring.Azure
+namespace Satrabel.AspBoilerPlate.BlobStoring.Azure
 {
     public class AzureBlobProvider : BlobProviderBase, ITransientDependency
     {

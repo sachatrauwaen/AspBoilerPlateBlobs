@@ -1,4 +1,4 @@
-﻿namespace Satrabel.Abp.BlobStoring.FileSystem
+﻿namespace Satrabel.AspBoilerPlate.BlobStoring.FileSystem
 {
     public interface IBlobFilePathCalculator
     {

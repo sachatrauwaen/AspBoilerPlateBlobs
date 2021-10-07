@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 //using Volo.Abp.DependencyInjection;
 //using Volo.Abp.Localization;
 
-namespace Satrabel.Abp.BlobStoring.Azure
+namespace Satrabel.AspBoilerPlate.BlobStoring.Azure
 {
     public class AzureBlobNamingNormalizer : IBlobNamingNormalizer, ITransientDependency
     {

@@ -2,7 +2,7 @@
 using System.Runtime.Serialization;
 using Abp;
 
-namespace Satrabel.Abp.BlobStoring
+namespace Satrabel.AspBoilerPlate.BlobStoring
 {
     public class BlobAlreadyExistsException : AbpException
     {

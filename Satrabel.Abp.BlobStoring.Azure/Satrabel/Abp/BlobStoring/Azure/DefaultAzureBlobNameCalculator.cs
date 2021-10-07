@@ -4,7 +4,7 @@
 using Abp.Dependency;
 using Abp.Runtime.Session;
 
-namespace Satrabel.Abp.BlobStoring.Azure
+namespace Satrabel.AspBoilerPlate.BlobStoring.Azure
 {
     public class DefaultAzureBlobNameCalculator : IAzureBlobNameCalculator, ITransientDependency
     {

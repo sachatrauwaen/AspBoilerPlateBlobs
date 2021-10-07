@@ -13,7 +13,7 @@ using Microsoft.Identity.Client;
 //using Azure.Storage.Blobs.Models;
 //using Volo.Abp.DependencyInjection;
 
-namespace Satrabel.Abp.BlobStoring.Sharepoint
+namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
 {
     public class SharepointBlobProvider : BlobProviderBase, ITransientDependency
     {

@@ -4,7 +4,7 @@ using System.IO;
 //using Volo.Abp.DependencyInjection;
 //using Volo.Abp.MultiTenancy;
 
-namespace Satrabel.Abp.BlobStoring.FileSystem
+namespace Satrabel.AspBoilerPlate.BlobStoring.FileSystem
 {
     public class DefaultBlobFilePathCalculator : IBlobFilePathCalculator, ITransientDependency
     {

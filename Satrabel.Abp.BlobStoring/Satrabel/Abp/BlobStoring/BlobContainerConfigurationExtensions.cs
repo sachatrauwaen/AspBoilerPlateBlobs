@@ -1,7 +1,7 @@
 ﻿using Abp;
 using JetBrains.Annotations;
 
-namespace Satrabel.Abp.BlobStoring
+namespace Satrabel.AspBoilerPlate.BlobStoring
 {
     public static class BlobContainerConfigurationExtensions
     {

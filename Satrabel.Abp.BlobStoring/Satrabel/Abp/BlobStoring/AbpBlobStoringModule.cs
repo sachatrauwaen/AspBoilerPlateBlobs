@@ -9,7 +9,7 @@ using System.Reflection;
 //using Volo.Abp.MultiTenancy;
 //using Volo.Abp.Threading;
 
-namespace Satrabel.Abp.BlobStoring
+namespace Satrabel.AspBoilerPlate.BlobStoring
 {
     [DependsOn(
         //typeof(AbpMultiTenancyModule),

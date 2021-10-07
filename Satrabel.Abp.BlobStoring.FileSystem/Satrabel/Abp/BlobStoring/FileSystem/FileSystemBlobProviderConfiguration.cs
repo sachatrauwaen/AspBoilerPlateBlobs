@@ -1,6 +1,6 @@
 ﻿using Abp;
 
-namespace Satrabel.Abp.BlobStoring.FileSystem
+namespace Satrabel.AspBoilerPlate.BlobStoring.FileSystem
 {
     public class FileSystemBlobProviderConfiguration
     {

@@ -13,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 //using Volo.Abp.MultiTenancy;
 //using Volo.Abp.Threading;
 
-namespace Satrabel.Abp.BlobStoring
+namespace Satrabel.AspBoilerPlate.BlobStoring
 {
     public class BlobContainer<TContainer> : IBlobContainer<TContainer>
         where TContainer : class

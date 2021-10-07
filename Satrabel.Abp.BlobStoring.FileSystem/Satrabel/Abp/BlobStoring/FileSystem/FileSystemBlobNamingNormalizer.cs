@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 //using Volo.Abp.DependencyInjection;
 //using Volo.Abp.Localization;
 
-namespace Satrabel.Abp.BlobStoring.FileSystem
+namespace Satrabel.AspBoilerPlate.BlobStoring.FileSystem
 {
     public class FileSystemBlobNamingNormalizer : IBlobNamingNormalizer, ITransientDependency
     {

@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using JetBrains.Annotations;
 
-namespace Satrabel.Abp.BlobStoring
+namespace Satrabel.AspBoilerPlate.BlobStoring
 {
     public class BlobProviderExistsArgs : BlobProviderArgs
     {

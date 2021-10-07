@@ -9,7 +9,7 @@ using Polly;
 //using Volo.Abp.DependencyInjection;
 //using Volo.Abp.IO;
 
-namespace Satrabel.Abp.BlobStoring.FileSystem
+namespace Satrabel.AspBoilerPlate.BlobStoring.FileSystem
 {
     public class FileSystemBlobProvider : BlobProviderBase, ITransientDependency
     {

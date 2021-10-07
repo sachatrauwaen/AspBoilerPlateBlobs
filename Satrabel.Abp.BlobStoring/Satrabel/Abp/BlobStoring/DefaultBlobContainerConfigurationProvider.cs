@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Options;
 //using Volo.Abp.DependencyInjection;
 
-namespace Satrabel.Abp.BlobStoring
+namespace Satrabel.AspBoilerPlate.BlobStoring
 {
     public class DefaultBlobContainerConfigurationProvider : IBlobContainerConfigurationProvider, ITransientDependency
     {

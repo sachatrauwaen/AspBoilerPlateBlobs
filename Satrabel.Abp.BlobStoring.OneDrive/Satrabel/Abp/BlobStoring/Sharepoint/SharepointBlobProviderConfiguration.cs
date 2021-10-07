@@ -1,6 +1,6 @@
 ﻿using Abp;
 
-namespace Satrabel.Abp.BlobStoring.Sharepoint
+namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
 {
     public class SharepointBlobProviderConfiguration
     {

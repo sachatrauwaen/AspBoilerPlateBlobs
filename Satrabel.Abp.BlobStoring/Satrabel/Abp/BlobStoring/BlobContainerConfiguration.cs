@@ -6,7 +6,7 @@ using Abp.Collections.Extensions;
 using JetBrains.Annotations;
 //using Volo.Abp.Collections;
 
-namespace Satrabel.Abp.BlobStoring
+namespace Satrabel.AspBoilerPlate.BlobStoring
 {
     public class BlobContainerConfiguration
     {

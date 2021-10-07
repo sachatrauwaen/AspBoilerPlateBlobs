@@ -3,7 +3,7 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 
-namespace Satrabel.Abp.BlobStoring.Sharepoint
+namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
 {
     [DependsOn(typeof(AbpBlobStoringModule))]
     public class AbpBlobStoringSharepointModule : AbpModule

@@ -1,6 +1,6 @@
 ﻿using Abp;
 
-namespace Satrabel.Abp.BlobStoring.Azure
+namespace Satrabel.AspBoilerPlate.BlobStoring.Azure
 {
     public class AzureBlobProviderConfiguration
     {

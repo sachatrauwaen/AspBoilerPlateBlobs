@@ -3,7 +3,7 @@ using System.Threading;
 using Abp;
 using JetBrains.Annotations;
 
-namespace Satrabel.Abp.BlobStoring
+namespace Satrabel.AspBoilerPlate.BlobStoring
 {
     public class BlobProviderSaveArgs : BlobProviderArgs
     {
