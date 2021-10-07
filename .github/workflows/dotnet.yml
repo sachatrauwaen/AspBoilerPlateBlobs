@@ -24,18 +24,5 @@ jobs:
     - name: Build solution and generate NuGet package
       run: dotnet pack --no-build -c Release -o .
     - name: Push generated package to GitHub registry
-      run: dotnet nuget push **\*.nupkg --skip-duplicate --no-symbols true -s https://nuget.pkg.github.com/sachatrauwaen/index.json -k ${GITHUB_TOKEN}
-      env:        
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-      
-   
-
-
-    #- name: Test
-    #  run: dotnet test --no-build --verbosity normal
-
-
-  
-
-    #- name: Push generated package to GitHub registry
-    #    run:dotnet nuget push ./<project>/out/*.nupkg --skip-duplicate --no-symbols true -s https://nuget.pkg.github.com/sachatrauwaen/index.json
+      run: dotnet nuget push **\*.nupkg --skip-duplicate --no-symbols true -s https://nuget.pkg.github.com/sachatrauwaen/index.json -k $GITHUB_TOKEN
+     
