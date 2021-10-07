@@ -23,6 +23,9 @@ jobs:
       run: dotnet build --no-restore
     - name: Build solution and generate NuGet package
       run: dotnet pack -c Release -o out
+    - name: Push generated package to GitHub registry
+      run: dotnet nuget push *.nupkg --skip-duplicate --no-symbols true
+
 
     #- name: Test
     #  run: dotnet test --no-build --verbosity normal
