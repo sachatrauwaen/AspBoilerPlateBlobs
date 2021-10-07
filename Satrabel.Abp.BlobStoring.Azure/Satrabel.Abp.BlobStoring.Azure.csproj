@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>Satrabel.Abp.BlobStoring.Azure</AssemblyName>
+        <PackageId>Satrabel.Abp.BlobStoring.Azure</PackageId>
+        <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+        <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+        <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+        <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Satrabel.Abp.BlobStoring\Satrabel.Abp.BlobStoring.csproj" />
+        <PackageReference Include="Azure.Storage.Blobs" Version="12.7.0" />
+    </ItemGroup>
+
+</Project>

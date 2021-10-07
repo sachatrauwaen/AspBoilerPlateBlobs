@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+Satrabel.Abp.BlobStoring.Azure/bin/
+Satrabel.Abp.BlobStoring.Azure/obj/
+.vs/
+Satrabel.Abp.BlobStoring.FileSystem/obj/
+Satrabel.Abp.BlobStoring.OneDrive/bin/
+Satrabel.Abp.BlobStoring.OneDrive/obj/
+Satrabel.Abp.BlobStoring/obj/

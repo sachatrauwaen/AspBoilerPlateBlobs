@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Satrabel.Abp.BlobStoring", "Satrabel.Abp.BlobStoring\Satrabel.Abp.BlobStoring.csproj", "{EB51F38D-DB65-4355-904A-FC61D24C90AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Satrabel.Abp.BlobStoring.FileSystem", "Satrabel.Abp.BlobStoring.FileSystem\Satrabel.Abp.BlobStoring.FileSystem.csproj", "{35760AD7-4276-43C7-9576-1004C748FC2F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Satrabel.Abp.BlobStoring.Azure", "Satrabel.Abp.BlobStoring.Azure\Satrabel.Abp.BlobStoring.Azure.csproj", "{F342806F-03C7-4EA9-B028-EEDEA21D417C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Satrabel.Abp.BlobStoring.Sharepoint", "Satrabel.Abp.BlobStoring.OneDrive\Satrabel.Abp.BlobStoring.Sharepoint.csproj", "{C2A3A4B7-9F74-493E-AF4F-23B88EFFDCAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB51F38D-DB65-4355-904A-FC61D24C90AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB51F38D-DB65-4355-904A-FC61D24C90AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB51F38D-DB65-4355-904A-FC61D24C90AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB51F38D-DB65-4355-904A-FC61D24C90AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35760AD7-4276-43C7-9576-1004C748FC2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35760AD7-4276-43C7-9576-1004C748FC2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35760AD7-4276-43C7-9576-1004C748FC2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35760AD7-4276-43C7-9576-1004C748FC2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F342806F-03C7-4EA9-B028-EEDEA21D417C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F342806F-03C7-4EA9-B028-EEDEA21D417C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F342806F-03C7-4EA9-B028-EEDEA21D417C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F342806F-03C7-4EA9-B028-EEDEA21D417C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2A3A4B7-9F74-493E-AF4F-23B88EFFDCAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2A3A4B7-9F74-493E-AF4F-23B88EFFDCAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2A3A4B7-9F74-493E-AF4F-23B88EFFDCAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2A3A4B7-9F74-493E-AF4F-23B88EFFDCAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5640DA1F-81CE-43C4-9738-254C70DA022B}
+	EndGlobalSection
+EndGlobal
