@@ -1,5 +1,6 @@
 ﻿using Abp.Threading;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -110,9 +111,15 @@ namespace Satrabel.AspBoilerPlate.BlobStoring
             }
         }
 
+        #region sync
+
         public static Stream Get(this IBlobContainer container,string name)
         {
             return AsyncHelper.RunSync(()=> container.GetAsync(name));
+        }
+        public static List<string> GetList(this IBlobContainer container, string prefix)
+        {
+            return AsyncHelper.RunSync(() => container.GetListAsync(prefix));
         }
         public static void Save(this IBlobContainer container,
             string name,
@@ -147,5 +154,6 @@ namespace Satrabel.AspBoilerPlate.BlobStoring
         {
             return AsyncHelper.RunSync(() => container.GetAllBytesAsync(name));
         }
+        #endregion
     }
 }

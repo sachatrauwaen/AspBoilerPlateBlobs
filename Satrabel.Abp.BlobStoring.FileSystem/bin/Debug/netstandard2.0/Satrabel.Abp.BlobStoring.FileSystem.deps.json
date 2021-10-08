@@ -7,11 +7,11 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "Satrabel.Abp.BlobStoring.FileSystem/1.0.0": {
+      "Satrabel.Abp.BlobStoring.FileSystem/1.0.4": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Polly": "7.2.1",
-          "Satrabel.Abp.BlobStoring": "1.0.0"
+          "Satrabel.Abp.BlobStoring": "1.0.4"
         },
         "runtime": {
           "Satrabel.Abp.BlobStoring.FileSystem.dll": {}
@@ -1072,7 +1072,7 @@
           }
         }
       },
-      "Satrabel.Abp.BlobStoring/1.0.0": {
+      "Satrabel.Abp.BlobStoring/1.0.4": {
         "dependencies": {
           "Abp": "5.1.0",
           "Abp.Web.Common": "5.1.0"
@@ -1084,7 +1084,7 @@
     }
   },
   "libraries": {
-    "Satrabel.Abp.BlobStoring.FileSystem/1.0.0": {
+    "Satrabel.Abp.BlobStoring.FileSystem/1.0.4": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1705,7 +1705,7 @@
       "path": "timezoneconverter/3.2.0",
       "hashPath": "timezoneconverter.3.2.0.nupkg.sha512"
     },
-    "Satrabel.Abp.BlobStoring/1.0.0": {
+    "Satrabel.Abp.BlobStoring/1.0.4": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

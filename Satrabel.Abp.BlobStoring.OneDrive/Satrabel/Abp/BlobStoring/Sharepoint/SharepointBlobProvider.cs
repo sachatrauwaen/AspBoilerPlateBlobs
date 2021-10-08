@@ -28,7 +28,7 @@ namespace Satrabel.AspBoilerPlate.BlobStoring.SharePoint
         {
             var blobName = AzureBlobNameCalculator.Calculate(args);
             var configuration = args.Configuration.GetSharePointConfiguration();
-            var graphClient = await GetGraphServiceClientAsync(args, blobName);
+            var graphClient = await GetGraphServiceClientAsync(args);
 
             if (!args.OverrideExisting && await BlobExistsAsync(graphClient, args, blobName))
             {
@@ -143,7 +143,7 @@ namespace Satrabel.AspBoilerPlate.BlobStoring.SharePoint
         {
             var blobName = AzureBlobNameCalculator.Calculate(args);
 
-            var graphClient = await GetGraphServiceClientAsync(args, blobName);
+            var graphClient = await GetGraphServiceClientAsync(args);
 
             if (await BlobExistsAsync(graphClient, args, blobName))
             {
@@ -158,7 +158,7 @@ namespace Satrabel.AspBoilerPlate.BlobStoring.SharePoint
         public override async Task<bool> ExistsAsync(BlobProviderExistsArgs args)
         {
             var blobName = AzureBlobNameCalculator.Calculate(args);
-            var graphClient = await GetGraphServiceClientAsync(args, blobName);
+            var graphClient = await GetGraphServiceClientAsync(args);
 
             return await BlobExistsAsync(graphClient, args, blobName);
         }
@@ -166,7 +166,7 @@ namespace Satrabel.AspBoilerPlate.BlobStoring.SharePoint
         public override async Task<Stream> GetOrNullAsync(BlobProviderGetArgs args)
         {
             var blobName = AzureBlobNameCalculator.Calculate(args);
-            var graphClient = await GetGraphServiceClientAsync(args, blobName);
+            var graphClient = await GetGraphServiceClientAsync(args);
             //var item = await GetDrive(graphClient).Root.ItemWithPath(args.BlobName)
             //    .Request()
             //    .GetAsync();
@@ -182,21 +182,29 @@ namespace Satrabel.AspBoilerPlate.BlobStoring.SharePoint
         public override async Task<List<string>> GetListAsync(BlobProviderGetArgs args)
         {
             var blobName = AzureBlobNameCalculator.Calculate(args);
-            var graphClient = await GetGraphServiceClientAsync(args, blobName);
+            var graphClient = await GetGraphServiceClientAsync(args);
+            IDriveItemRequestBuilder folder;
+            if (string.IsNullOrEmpty(args.BlobName) || args.BlobName == "/")
+            {
 
-            var children = await graphClient.Sites["root"].Drive.Root.Children
-                .Request()
-                .GetAsync();
-
+                folder = graphClient.Sites["root"].Drive.Root;
+            }
+            else
+            {
+                folder = graphClient.Sites["root"].Drive.Root.ItemWithPath(args.BlobName);
+            }
+            var children = await folder.Children
+                    .Request()
+                    .GetAsync();
             return children.Select(f => GetFullPath(f.ParentReference.Path, f.Name)).ToList();
         }
 
         private string GetFullPath(string path, string name)
         {
-            return path.Substring(path.IndexOf(':')) + "/" + name;
+            return path.Substring(path.IndexOf(':')+1) + "/" + name;
         }
 
-        protected virtual async Task<GraphServiceClient> GetGraphServiceClientAsync(BlobProviderArgs args, string blobName)
+        protected virtual async Task<GraphServiceClient> GetGraphServiceClientAsync(BlobProviderArgs args)
         {
             var accessToken = await GetTokenAsync(args);
 
@@ -222,12 +230,18 @@ namespace Satrabel.AspBoilerPlate.BlobStoring.SharePoint
             // Make sure Blob Container exists.
             //return await ContainerExistsAsync(GetBlobContainerClient(args)) &&
             //(await GetBlobClientAsync(args, blobName).ExistsAsync()).Value;
-
-            var item = await GetDrive(graphClient).Root.ItemWithPath(args.BlobName)
-               .Request()
-               .GetAsync();
-
-            return item != null;
+            try
+            {
+                var item = await GetDrive(graphClient).Root.ItemWithPath(args.BlobName)
+             .Request()
+             .GetAsync();
+            }
+            catch (Microsoft.Graph.ServiceException ex)
+            {
+                if (ex.StatusCode == System.Net.HttpStatusCode.NotFound) return false;
+                throw;
+            }
+            return true;
         }
 
         private static string GetContainerName(BlobProviderArgs args)
