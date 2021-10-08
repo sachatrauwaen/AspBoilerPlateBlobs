@@ -3,15 +3,15 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 
-namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
+namespace Satrabel.AspBoilerPlate.BlobStoring.SharePoint
 {
     [DependsOn(typeof(AbpBlobStoringModule))]
-    public class AbpBlobStoringSharepointModule : AbpModule
+    public class AbpBlobStoringSharePointModule : AbpModule
     {
         public override void PreInitialize()
         {
-            IocManager.RegisterAssemblyByConvention(typeof(AbpBlobStoringSharepointModule).GetAssembly());
-            Configuration.BlobStoring().Providers.Add<SharepointBlobProvider>();
+            IocManager.RegisterAssemblyByConvention(typeof(AbpBlobStoringSharePointModule).GetAssembly());
+            Configuration.BlobStoring().Providers.Add<SharePointBlobProvider>();
         }
     }
 }

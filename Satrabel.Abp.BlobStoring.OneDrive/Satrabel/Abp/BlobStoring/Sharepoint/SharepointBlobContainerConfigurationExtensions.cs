@@ -1,23 +1,23 @@
 ﻿using System;
 
-namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
+namespace Satrabel.AspBoilerPlate.BlobStoring.SharePoint
 {
-    public static class SharepointBlobContainerConfigurationExtensions
+    public static class SharePointBlobContainerConfigurationExtensions
     {
-        public static SharepointBlobProviderConfiguration GetOneDriveConfiguration(
+        public static SharePointBlobProviderConfiguration GetSharePointConfiguration(
             this BlobContainerConfiguration containerConfiguration)
         {
-            return new SharepointBlobProviderConfiguration(containerConfiguration);
+            return new SharePointBlobProviderConfiguration(containerConfiguration);
         }
 
-        public static BlobContainerConfiguration UseOneDrive(
+        public static BlobContainerConfiguration UseSharePoint(
             this BlobContainerConfiguration containerConfiguration,
-            Action<SharepointBlobProviderConfiguration> oneDriveConfigureAction)
+            Action<SharePointBlobProviderConfiguration> sharePointConfigureAction)
         {
-            containerConfiguration.ProviderType = typeof(SharepointBlobProvider);
-            containerConfiguration.NamingNormalizers.Add<SharepointBlobNamingNormalizer>();
+            containerConfiguration.ProviderType = typeof(SharePointBlobProvider);
+            containerConfiguration.NamingNormalizers.Add<SharePointBlobNamingNormalizer>();
 
-            oneDriveConfigureAction(new SharepointBlobProviderConfiguration(containerConfiguration));
+            sharePointConfigureAction(new SharePointBlobProviderConfiguration(containerConfiguration));
 
             return containerConfiguration;
         }

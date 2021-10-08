@@ -1,6 +1,6 @@
-﻿namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
+﻿namespace Satrabel.AspBoilerPlate.BlobStoring.SharePoint
 {
-    public interface ISharepointBlobNameCalculator
+    public interface ISharePointBlobNameCalculator
     {
         string Calculate(BlobProviderArgs args);
     }

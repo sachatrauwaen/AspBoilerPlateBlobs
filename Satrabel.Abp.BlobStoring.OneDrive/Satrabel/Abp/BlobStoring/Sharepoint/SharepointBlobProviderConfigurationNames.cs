@@ -1,14 +1,15 @@
-﻿namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
+﻿namespace Satrabel.AspBoilerPlate.BlobStoring.SharePoint
 {
-    public static class SharepointBlobProviderConfigurationNames
+    public static class SharePointBlobProviderConfigurationNames
     {
-        public const string ClientId = "OneDrive.ClientId";
-        public const string ClientSecret = "OneDrive.ClientSecret";
-        public const string Authority = "OneDrive.Authority";
-        public const string ApiUrl = "OneDrive.ApiUrl";
+        public const string ClientId = "SharePoint.ClientId";
+        public const string ClientSecret = "SharePoint.ClientSecret";
+        public const string Instance = "SharePoint.Instance";
+        public const string Tenant = "SharePoint.Tenant";
+        public const string ApiUrl = "SharePoint.ApiUrl";
 
 
-        public const string ContainerName  = "OneDrive.ContainerName";
-        public const string CreateContainerIfNotExists  = "OneDrive.CreateContainerIfNotExists";
+        public const string ContainerName  = "SharePoint.ContainerName";
+        public const string CreateContainerIfNotExists  = "SharePoint.CreateContainerIfNotExists";
     }
 }

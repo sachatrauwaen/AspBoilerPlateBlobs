@@ -4,9 +4,9 @@ using System.Text.RegularExpressions;
 //using Volo.Abp.DependencyInjection;
 //using Volo.Abp.Localization;
 
-namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
+namespace Satrabel.AspBoilerPlate.BlobStoring.SharePoint
 {
-    public class SharepointBlobNamingNormalizer : IBlobNamingNormalizer, ITransientDependency
+    public class SharePointBlobNamingNormalizer : IBlobNamingNormalizer, ITransientDependency
     {
         //private readonly IOSPlatformProvider _iosPlatformProvider;
 

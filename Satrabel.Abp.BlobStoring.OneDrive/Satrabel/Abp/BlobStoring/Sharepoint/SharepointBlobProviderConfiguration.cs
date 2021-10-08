@@ -1,31 +1,39 @@
 ﻿using Abp;
+using System;
+using System.Globalization;
 
-namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
+namespace Satrabel.AspBoilerPlate.BlobStoring.SharePoint
 {
-    public class SharepointBlobProviderConfiguration
+    public class SharePointBlobProviderConfiguration
     {
         public string ClientId
         {
-            get => _containerConfiguration.GetConfiguration<string>(SharepointBlobProviderConfigurationNames.ClientId);
-            set => _containerConfiguration.SetConfiguration(SharepointBlobProviderConfigurationNames.ClientId, Check.NotNullOrWhiteSpace(value, nameof(value)));
+            get => _containerConfiguration.GetConfiguration<string>(SharePointBlobProviderConfigurationNames.ClientId);
+            set => _containerConfiguration.SetConfiguration(SharePointBlobProviderConfigurationNames.ClientId, Check.NotNullOrWhiteSpace(value, nameof(value)));
         }
 
         public string ClientSecret
         {
-            get => _containerConfiguration.GetConfiguration<string>(SharepointBlobProviderConfigurationNames.ClientSecret);
-            set => _containerConfiguration.SetConfiguration(SharepointBlobProviderConfigurationNames.ClientSecret, Check.NotNullOrWhiteSpace(value, nameof(value)));
+            get => _containerConfiguration.GetConfiguration<string>(SharePointBlobProviderConfigurationNames.ClientSecret);
+            set => _containerConfiguration.SetConfiguration(SharePointBlobProviderConfigurationNames.ClientSecret, Check.NotNullOrWhiteSpace(value, nameof(value)));
         }
 
-        public string Authority
+        public string Instance
         {
-            get => _containerConfiguration.GetConfiguration<string>(SharepointBlobProviderConfigurationNames.Authority);
-            set => _containerConfiguration.SetConfiguration(SharepointBlobProviderConfigurationNames.Authority, Check.NotNullOrWhiteSpace(value, nameof(value)));
+            get => _containerConfiguration.GetConfiguration<string>(SharePointBlobProviderConfigurationNames.Instance);
+            set => _containerConfiguration.SetConfiguration(SharePointBlobProviderConfigurationNames.Instance, Check.NotNullOrWhiteSpace(value, nameof(value)));
+        }
+
+        public string Tenant
+        {
+            get => _containerConfiguration.GetConfiguration<string>(SharePointBlobProviderConfigurationNames.Tenant);
+            set => _containerConfiguration.SetConfiguration(SharePointBlobProviderConfigurationNames.Tenant, Check.NotNullOrWhiteSpace(value, nameof(value)));
         }
 
         public string ApiUrl
         {
-            get => _containerConfiguration.GetConfiguration<string>(SharepointBlobProviderConfigurationNames.ApiUrl);
-            set => _containerConfiguration.SetConfiguration(SharepointBlobProviderConfigurationNames.ApiUrl, Check.NotNullOrWhiteSpace(value, nameof(value)));
+            get => _containerConfiguration.GetConfiguration<string>(SharePointBlobProviderConfigurationNames.ApiUrl);
+            set => _containerConfiguration.SetConfiguration(SharePointBlobProviderConfigurationNames.ApiUrl, Check.NotNullOrWhiteSpace(value, nameof(value)));
         }
 
 
@@ -37,8 +45,8 @@ namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
         /// </summary>
         public string ContainerName
         {
-            get => _containerConfiguration.GetConfigurationOrDefault<string>(SharepointBlobProviderConfigurationNames.ContainerName);
-            set => _containerConfiguration.SetConfiguration(SharepointBlobProviderConfigurationNames.ContainerName, Check.NotNullOrWhiteSpace(value, nameof(value)));
+            get => _containerConfiguration.GetConfigurationOrDefault<string>(SharePointBlobProviderConfigurationNames.ContainerName);
+            set => _containerConfiguration.SetConfiguration(SharePointBlobProviderConfigurationNames.ContainerName, Check.NotNullOrWhiteSpace(value, nameof(value)));
         }
 
         /// <summary>
@@ -50,9 +58,18 @@ namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
         //    set => _containerConfiguration.SetConfiguration(OneDriveBlobProviderConfigurationNames.CreateContainerIfNotExists, value);
         //}
 
+
+        public string Authority
+        {
+            get
+            {
+                return String.Format(CultureInfo.InvariantCulture, Instance, Tenant);
+            }
+        }
+
         private readonly BlobContainerConfiguration _containerConfiguration;
 
-        public SharepointBlobProviderConfiguration(BlobContainerConfiguration containerConfiguration)
+        public SharePointBlobProviderConfiguration(BlobContainerConfiguration containerConfiguration)
         {
             _containerConfiguration = containerConfiguration;
         }

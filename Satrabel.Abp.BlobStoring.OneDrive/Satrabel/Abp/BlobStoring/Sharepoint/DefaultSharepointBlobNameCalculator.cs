@@ -4,13 +4,13 @@
 using Abp.Dependency;
 using Abp.Runtime.Session;
 
-namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
+namespace Satrabel.AspBoilerPlate.BlobStoring.SharePoint
 {
-    public class DefaultSharepointBlobNameCalculator : ISharepointBlobNameCalculator, ITransientDependency
+    public class DefaultSharePointBlobNameCalculator : ISharePointBlobNameCalculator, ITransientDependency
     {
         protected IAbpSession AbpSession { get; }
 
-        public DefaultSharepointBlobNameCalculator(IAbpSession abpSession)
+        public DefaultSharePointBlobNameCalculator(IAbpSession abpSession)
         {
             AbpSession = abpSession;
         }

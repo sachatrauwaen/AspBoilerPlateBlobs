@@ -13,13 +13,13 @@ using Microsoft.Identity.Client;
 //using Azure.Storage.Blobs.Models;
 //using Volo.Abp.DependencyInjection;
 
-namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
+namespace Satrabel.AspBoilerPlate.BlobStoring.SharePoint
 {
-    public class SharepointBlobProvider : BlobProviderBase, ITransientDependency
+    public class SharePointBlobProvider : BlobProviderBase, ITransientDependency
     {
-        protected ISharepointBlobNameCalculator AzureBlobNameCalculator { get; }
+        protected ISharePointBlobNameCalculator AzureBlobNameCalculator { get; }
 
-        public SharepointBlobProvider(ISharepointBlobNameCalculator azureBlobNameCalculator)
+        public SharePointBlobProvider(ISharePointBlobNameCalculator azureBlobNameCalculator)
         {
             AzureBlobNameCalculator = azureBlobNameCalculator;
         }
@@ -27,7 +27,7 @@ namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
         public override async Task SaveAsync(BlobProviderSaveArgs args)
         {
             var blobName = AzureBlobNameCalculator.Calculate(args);
-            var configuration = args.Configuration.GetOneDriveConfiguration();
+            var configuration = args.Configuration.GetSharePointConfiguration();
             var graphClient = await GetGraphServiceClientAsync(args, blobName);
 
             if (!args.OverrideExisting && await BlobExistsAsync(graphClient, args, blobName))
@@ -232,7 +232,7 @@ namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
 
         private static string GetContainerName(BlobProviderArgs args)
         {
-            var configuration = args.Configuration.GetOneDriveConfiguration();
+            var configuration = args.Configuration.GetSharePointConfiguration();
             return configuration.ContainerName.IsNullOrWhiteSpace()
                 ? args.ContainerName
                 : configuration.ContainerName;
@@ -247,7 +247,7 @@ namespace Satrabel.AspBoilerPlate.BlobStoring.Sharepoint
         private async Task<string> GetTokenAsync(BlobProviderArgs args)
         {
 
-            var configuration = args.Configuration.GetOneDriveConfiguration();
+            var configuration = args.Configuration.GetSharePointConfiguration();
             //AuthenticationConfig config = AuthenticationConfig.ReadFromJsonFile("appsettings.json");
 
             // You can run this sample using ClientSecret or Certificate. The code will differ only when instantiating the IConfidentialClientApplication
